@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <style>
+      @font-face {
+        font-family: laser;
+        src: url('fonts/LaserCorpsGradient.otf');
+      }
+      @font-face {
+        font-family: neon2;
+        src: url('fonts/neon2.ttf');
+      }
+      @font-face {
+        font-family: neon;
+        src: url('fonts/Neon.ttf');
+      }
+      @font-face {
+        font-family: aero;
+        src: url('fonts/aero.ttf');
+        src: url('fonts/Neon.ttf');
+      }
+      @font-face {
+        font-family: laserhalf;
+        src: url('fonts/LaserCorpsHalftone.otf');
+      }      
+      body.rocket{background-image: url('rocket.jpg'); background-position: 60% 20%; }
+      body.ring{background-image: url('ring.png'); background-position: top center; }
+      body.skyline{background-image: url('skyline3.jpg'); background-position: top center; }
+      body.night{background-image: url('night.jpg'); background-position: center center; }
+      body.eighties{background-image: url('80s.png'); background-position: center center; }
+      body{
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+      }
+      h1{
+        font-family: neon;
+        color:lightcyan;
+        text-align: center;
+        font-size: 1000%;
+        margin: 12vh 0 10px 0;
+        font-weight: normal;
+        text-shadow: 0.05em 0.05em chocolate;
+        cursor: pointer;
+      }
+      p, li{
+        display: block;
+        width: 800px;
+        max-width: 80%;
+        margin: 1em auto;
+        font-size: 32px;
+        font-family: 'aero';
+      }
+      li{
+        margin: 0.5em auto;
+        cursor: pointer;
+      }
+      p span{
+        cursor: pointer;
+      }
+    </style>
+    <script >
+      var fonts=["laser", "neon2", "neon", "aero", "laserhalf"]
+      var fontNum = 0;
+      function switchfont(){
+        document.getElementsByTagName("h1")[0].setAttribute("style", "font-family: " + fonts[fontNum]);
+        fontNum = (fontNum + 1) % fonts.length;
+      }
+    </script>
+  </head>
+  <body class="rocket">
+    <h1 onclick="switchfont()">Dev_Next()</h1>
+    <p>Choose background from:
+      <ul>
+        <li onclick='document.body.className = "rocket";'>Rocket</li>
+        <li onclick='document.body.className = "ring";'>Ring</li>
+        <li onclick='document.body.className = "skyline";'>Skyline</li>
+        <li onclick='document.body.className = "night";'>Night</li>
+        <li onclick='document.body.className = "eighties";'>Eighties</li>
+      </ul>
+    </p>
+    <p>Title: 
+      "<span onclick='document.getElementsByTagName("h1")[0].innerText="Dev: Next"'>Dev: Next</span>" 
+      or "<span onclick='document.getElementsByTagName("h1")[0].innerText="Dev_Next()"'>Dev_Next()</span>"
+      or "<span onclick='document.getElementsByTagName("h1")[0].innerText="DevNext"'>DevNext</span>"
+    </p>
+    <p>
+      Ekore e tika kia noho he Maori rawakore ki tenei whenua; ehara tenei i te mea e ora ai tatou e tika ai ranei ratou. E mea ana tatou kia noho te Maori i runga i te rangimarie penei me tatou, a e ki ana ahau mehemea tera tetahi iwi i whiwhi nui ki te whenua kua kite ratou kei to mawehe atu o ratou whenua i a ratou, e tika ana ano kia pouri ratou.
+    </p>
+
+  </body>
+</html>
