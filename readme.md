@@ -1,4 +1,4 @@
 # Demo Dev:Next site
 
-see <https://DevNextWeb.github.io>
+See <https://claruspeter.github.io/DevNextWeb/>
 
