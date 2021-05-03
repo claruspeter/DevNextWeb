@@ -58,6 +58,16 @@
       p span{
         cursor: pointer;
       }
+      label{
+        font-family: monospace;
+        width: 800px;
+        max-width: 80%;
+        font-size: 12px;
+        text-align: right;
+        display: block;
+        margin: 1em auto;
+
+      }
     </style>
     <script >
       var fonts=["laser", "neon2", "neon", "aero", "laserhalf"]
@@ -70,6 +80,7 @@
   </head>
   <body class="rocket">
     <h1 onclick="switchfont()">Dev_Next()</h1>
+    <label>(Click the title to cycle through a few fonts too)</label>
     <p>Choose background from:
       <ul>
         <li onclick='document.body.className = "rocket";'>Rocket</li>
